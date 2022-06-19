@@ -1,0 +1,115 @@
+<!--
+  Design inspired by https://dribbble.com/shots/17857639-Checkout-Web-App.
+
+  This is the final version of the websie that we should be able to create in week 7.
+  The session will focus on the following javascript aspects.
+  1. Conditionals
+  2. Loops
+  3. Functions
+  4. Comparisions
+      a. coercion
+      b. truthy & falsy
+      c. Equality
+      d. Inequality
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pico.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Checkout process</title>
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><strong>Our awesome store</strong> | Fashion</li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#" class="secondary" id="toggle-theme">Toggle theme</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="grid">
+        <div>
+          <section>
+            <hgroup>
+              <h2>Summary of order</h2>
+              <h3>
+                Check your item and select your shipping for better experience.
+              </h3>
+            </hgroup>
+
+            <progress id="progress-summary-of-order"></progress>
+            <div id="list"></div>
+          </section>
+        </div>
+        <div>
+          <section>
+            <hgroup>
+              <h2>Payment details</h2>
+              <h3>Complete your purchase by providing your payment details</h3>
+            </hgroup>
+            <progress id="progress-payment-details"></progress>
+            <form>
+              <label for="email" class="control-label">
+                Email Address
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email address"
+                  required
+                />
+              </label>
+              <label for="card-number" class="control-label">
+                Card Number
+                <input
+                  type="number"
+                  id="card-number"
+                  name="card-number"
+                  placeholder="1234 1234 1234 1234"
+                  required
+                />
+              </label>
+              <label for="card-holder" class="control-label">
+                Card Number
+                <input
+                  type="text"
+                  id="card-holder"
+                  name="card-holder"
+                  placeholder="John Doe Mwangi"
+                  required
+                />
+              </label>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Subtotal</td>
+                    <td class="table-cell-amount" id="subtotal">Ksh. 0</td>
+                  </tr>
+                  <tr>
+                    <td>Tax(16%)</td>
+                    <td class="table-cell-amount" id="tax">Ksh. 0</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button type="submit" id="payment-button">Pay Ksh. 0</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+    <div class="footer-container">
+      <p>Thank you for shopping with us ❤️</p>
+    </div>
+    <footer></footer>
+    <script src="index.js" type="text/javascript" defer></script>
+  </body>
+</html>
